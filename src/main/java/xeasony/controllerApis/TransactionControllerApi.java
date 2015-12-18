@@ -25,7 +25,6 @@ public class TransactionControllerApi {
     }
 
     @RequestMapping(path={"/transaction/{id:[\\d]+}"}, method={RequestMethod.PUT})
-    @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<?> createOrUpdate(@PathVariable Long id, @Validated @RequestBody Transaction transaction) {
         Transaction existed = transactionService.findOneById(id);
 
@@ -39,11 +38,13 @@ public class TransactionControllerApi {
     }
 
     @RequestMapping(method={RequestMethod.GET})
+    @ResponseStatus(HttpStatus.OK)
     public List<Transaction> findAll() {
         return transactionService.findAll();
     }
 
     @RequestMapping(path={"/transaction/{id:[\\d]+}"}, method={RequestMethod.GET})
+    @ResponseStatus(HttpStatus.OK)
     public Transaction findOneById(@PathVariable Long id) throws Exception {
         Transaction transaction = transactionService.findOneById(id);
         if (transaction == null) {
@@ -53,11 +54,13 @@ public class TransactionControllerApi {
     }
 
     @RequestMapping(path={"/types/{type}"}, method={RequestMethod.GET})
+    @ResponseStatus(HttpStatus.OK)
     public List<Long> findByType(@PathVariable String type) {
         return transactionService.findByType(type);
     }
 
     @RequestMapping(path={"/sum/{id:[\\d]+}"}, method={RequestMethod.GET})
+    @ResponseStatus(HttpStatus.OK)
     public TotalAmountDTO getTotalAmountById(@PathVariable Long id) throws Exception {
         Transaction transaction = transactionService.findOneById(id);
         if (transaction == null) {
