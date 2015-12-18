@@ -71,7 +71,7 @@ public class TransactionService implements ITransactionService {
         BigDecimal childAmount = new BigDecimal(0);
 
         if (childTransactions != null) {
-            childAmount = map.get(transaction)
+            childAmount = childTransactions
                             .stream()
                             .map(
                                 child -> getTotalAmountByTransaction(child, map)
