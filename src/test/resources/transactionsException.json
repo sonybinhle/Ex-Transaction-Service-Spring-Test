@@ -1,0 +1,20 @@
+{
+  "ids": [1, 2, 3],
+  "transactions": [
+    {
+      "amount": "not_double",
+      "type": "",
+      "parent_id": 99999
+    },
+    {
+      "amount": 123,
+      "type": "",
+      "parent_id": 99999
+    },
+    {
+      "amount": 1234,
+      "type": "cars",
+      "parent_id": 99999
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "ids": [10, 11, 12, 13, 14, 15, 16],
+  "carIds": [10, 12],
+  "shoppingIds": [11],
+  "totalAmountsSimple": [18000.3, 10000.1, 3000.1],
+  "totalAmountsComplex": [18001, 10000.7, 3000.2, 0.1, 0.5, 0.3, 0.1],
+  "updatedId": 16,
+  "updatedTransaction": {
+    "amount": 0.2,
+    "type": "shopping",
+    "parent_id": 11
+  },
+  "transactions": [
+    {
+      "amount": 5000.1,
+      "type": "cars"
+    },
+    {
+      "amount": 10000.1,
+      "type": "shopping",
+      "parent_id": 10
+    },
+    {
+      "amount": 3000.1,
+      "type": "cars",
+      "parent_id": 10
+    },
+    {
+      "amount": 0.1,
+      "type": "cars",
+      "parent_id": 11
+    },
+    {
+      "amount": 0.2,
+      "type": "cars",
+      "parent_id": 11
+    },
+    {
+      "amount": 0.3,
+      "type": "cars",
+      "parent_id": 14
+    },
+    {
+      "amount": 0.1,
+      "type": "cars",
+      "parent_id": 12
+    }
+  ]
+}
